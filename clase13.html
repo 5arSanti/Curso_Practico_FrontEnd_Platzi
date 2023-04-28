@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <title>Document</title>
+
+        <style>
+
+            .product-detail{
+                width: 360px;
+                height: 100vh;
+                position: absolute;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 20px;
+                box-sizing: border-box;
+                border-left: 2px solid var(--text-input-field);
+            }
+
+            .shopping-cart-title{
+                display: flex;
+                align-items: center;
+                border-bottom: 2px solid var(--text-input-field);
+            }
+            .shopping-cart-title img{
+                transform: rotate(180deg);
+                margin: 0 16px;  
+            }
+            .shopping-cart-title p{
+                font-weight: bold;
+                font-size: var(--lg);
+            }
+            .all-carts{
+                margin: 20px 0 0 0;
+            }
+            .container2{
+                z-index: 1
+            }
+
+            .shopping-cart{
+                display: grid;
+                grid-template-columns: auto 1fr auto auto;
+                gap: 16px;
+                margin: 0 0 24px 0;
+                align-items: center;
+            }
+            .shopping-cart:hover{
+                background-color: var(--text-input-field);
+                border-radius: 20px;
+            }
+            .shopping-cart figure{
+                margin: 0;
+            }
+            .shopping-cart figure img{
+                width: 70px;
+                height: 70px;
+                border-radius: 20px;
+                object-fit: cover;
+            }
+            .shopping-cart p:nth-child(2) {
+                color: var(--very-light-pink);
+            }
+            .shopping-cart p:nth-child(3) {
+                font-size: var(--md);
+                font-weight: bold;
+            }
+            .icon-close-img{
+                cursor: pointer;
+                margin: 0 10px 0 0;
+            }
+
+            .order{
+                display: grid;
+                grid-template-columns: auto 1fr;
+                gap: 16px;
+                align-items: center;
+                background-color: var(--text-input-field);
+                margin: 0 0 16px 0;
+                border-radius: 8px;
+                padding: 0 24px;
+                height: 60px;
+            }
+            .order span{
+                font-size: var(--sm);
+                font-weight: bold; 
+            }
+            .order p{
+                text-align: end;
+                font-weight: bold;
+            }
+
+            .primary-button {
+                background-color: var(--hospital-green);
+                border-radius: 8px;
+                border: none;
+                color: var(--white);
+                width: 100%;
+                cursor: pointer;
+                font-size: var(--md);
+                font-weight: bold;
+                height: 55px;                
+            }
+
+            @media (max-width:640px){
+                .product-detail{
+                width: 100%;
+            }
+            }
+        </style>
+    </head>
+
+    <body>
+        <aside class="product-detail">
+            <div class="container">
+
+                <div class="shopping-cart-title">
+                    <img src="./Icons/flechita.svg" alt="arrow" class="arrow">
+                    <p>Shopping Cart</p>
+                </div>
+                <div class="all-carts">
+
+                    <div class="shopping-cart">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Producto">
+                        </figure>
+                        <p>Bike</p>
+                        <p>$30.00</p>
+                        <img src="Icons/icon_close.png" alt="clase" class="icon-close-img">
+                    </div>
+
+                    <div class="shopping-cart">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Producto">
+                        </figure>
+                        <p>Bike</p>
+                        <p>$30.00</p>
+                        <img src="Icons/icon_close.png" alt="clase" class="icon-close-img">
+                    </div>
+
+                    <div class="shopping-cart">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Producto">
+                        </figure>
+                        <p>Bike</p>
+                        <p>$30.00</p>
+                        <img src="Icons/icon_close.png" alt="clase" class="icon-close-img">
+                    </div>
+
+                    <div class="shopping-cart">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Producto">
+                        </figure>
+                        <p>Bike</p>
+                        <p>$30.00</p>
+                        <img src="Icons/icon_close.png" alt="clase" class="icon-close-img">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container2">
+                <div class="order">
+                    <span>Total</span>
+                    <p>$560.00</p>
+                </div>
+    
+                <button class="primary-button add-button">
+                    <p>Checkout</p>
+                </button>
+            </div>
+
+        </aside>    
+    </body>
+</html>
