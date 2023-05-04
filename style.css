@@ -13,3 +13,130 @@ body{
     margin: 0;
 }
 
+.inactive{
+    display: none;
+}
+
+.menu{
+    display: none;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border-bottom: 2px solid var(--text-input-field);
+}
+.navbar-left, .navbar-right{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 100px;
+}
+.navbar-left ul, .navbar-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 16px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right ul li{
+    margin: 0 12px;
+}
+.navbar-left ul li a, .navbar-right ul li a{
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--very-light-pink);
+    border-radius: 8px;
+    padding: 8px;
+    margin: 0 5px 0 5px;
+}
+.navbar-left ul li a:hover, .navbar-right ul li a:hover{
+    border: 1px solid var(--hospital-green);
+    color: var(--hospital-green);
+}
+.user{
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+}
+.shopping-cart-logo{
+    position: relative;
+    display: flex;
+}
+.shopping-cart-logo div{
+    width: 16px;
+    height: 16px;
+    background-color: var(--hospital-green);
+    border-radius: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--white);
+    position: absolute;
+    right: 7px;
+    top: 4px;
+    text-align: center;
+    align-self: center;
+}
+
+
+
+.desktop-menu{
+    position: absolute;
+    right: 40px;
+    top: 68px;
+    background-color: var(--white);
+
+    width: 100px;
+    height: auto;
+    border: 1px solid var(--very-light-pink);
+    border-radius: 5px;
+    padding: 20px 20px 0 20px;
+}
+.desktop-menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.desktop-menu ul li{
+    text-align: end;
+}
+.desktop-menu ul li:not(:last-child) {
+    font-weight: bold;
+}
+.desktop-menu ul li:last-child{
+    padding: 20px 0 0 0;
+    border-top: 1px solid var(--very-light-pink);
+}
+.desktop-menu ul li:last-child a{
+    color: var(--hospital-green);
+    font-size: var(-sm);
+}
+.desktop-menu ul li a{
+    color: var(--black);
+    text-decoration: none;
+    margin: 0 0 20px 0;
+    display: inline-block;
+}
+
+@media (max-width: 910px){
+    .menu{
+        display: block;
+        margin: 0 24px 0 0;
+    }
+    .navbar-left ul{
+        display: none;
+    }
+    .user{
+        display: none;  
+    }
+}
+
