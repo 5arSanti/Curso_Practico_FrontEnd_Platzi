@@ -17,14 +17,14 @@ const mobileMenu =document.querySelector(".mobile-menu")
 
 burgerIcon.addEventListener("click", toggleMobileMenu);
 function toggleMobileMenu() {
-    const isShoppingCartClosed = shoppingCartMenu.classList.contains("inactive"); //Si contiene inactive esta cerrado
+    const isShoppingCartClosed = shoppingCartContainer.classList.contains("inactive"); //Si contiene inactive esta cerrado
 
     if(isShoppingCartClosed){
         //Abre el mobile menu
         mobileMenu.classList.toggle("inactive");
     }
     else{
-        shoppingCartMenu.classList.add("inactive");
+        shoppingCartContainer.classList.add("inactive");
         mobileMenu.classList.toggle("inactive");
     }
 }
@@ -33,7 +33,7 @@ function toggleMobileMenu() {
 //--------------------------------------------------------------
 //Shopping Cart
 const cartIcon = document.querySelector(".navbar-shopping-cart");
-const shoppingCartMenu =document.querySelector(".product-detail")
+const shoppingCartContainer =document.querySelector("#shoppingCartContainer");
 
 cartIcon.addEventListener("click", toggleShoppingCart);
 function toggleShoppingCart() {
@@ -41,11 +41,11 @@ function toggleShoppingCart() {
 
     if(isMobileMenuClosed){
         //Abre el shopping cart
-        shoppingCartMenu.classList.toggle("inactive");
+        shoppingCartContainer.classList.toggle("inactive");
     }
     else{
         mobileMenu.classList.add("inactive");
-        shoppingCartMenu.classList.toggle("inactive");
+        shoppingCartContainer.classList.toggle("inactive");
     }
 }
 
